@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.InputSystem.UI;
+using UnityEngine.InputSystem;
 
 public class VirtualMouseModifier : MonoBehaviour
 {
@@ -7,12 +7,12 @@ public class VirtualMouseModifier : MonoBehaviour
     [SerializeField] float _maxSpeed;
     [SerializeField] float _defaultSpeed;
     
-    private VirtualMouseInput _virtualMouseInput;
+    private VirtualMouse _virtualMouse;
     private GetColor _getColor;
 
     private void Awake()
     {
-        _virtualMouseInput = GetComponent<VirtualMouseInput>();
+        _virtualMouse = GetComponent<VirtualMouse>();
         _getColor = GetComponent<GetColor>();
 
         Cursor.visible = false;
@@ -21,7 +21,7 @@ public class VirtualMouseModifier : MonoBehaviour
 
     void Update()
     {
-        Color color = _getColor.GetPixelColorFromImage(_virtualMouseInput.cursorTransform.position);
+        Color color = _getColor.GetPixelColorFromImage(_virtualMouse.CursorTransform.position);
         UpdateSpeedWithColor(color);
 
         LockCursorInScreen();
@@ -39,7 +39,7 @@ public class VirtualMouseModifier : MonoBehaviour
             var hue = ColorToHue(color);
             speed = Mathf.Lerp(_minSpeed, _maxSpeed, hue);
         }
-        _virtualMouseInput.cursorSpeed = speed;
+        _virtualMouse.CursorSpeed = speed;
     }
 
     private float ColorToHue(Color color)
@@ -55,12 +55,12 @@ public class VirtualMouseModifier : MonoBehaviour
 
     private void LockCursorInScreen()
     {
-        var screenPosition = _virtualMouseInput.cursorTransform.position;
+        var screenPosition = _virtualMouse.CursorTransform.position;
         var clampedPosition = new Vector2(
             Mathf.Clamp(screenPosition.x, 0, Screen.width),
             Mathf.Clamp(screenPosition.y, 0, Screen.height)
         );
 
-        _virtualMouseInput.cursorTransform.position = clampedPosition;
+        _virtualMouse.CursorTransform.position = clampedPosition;
     }
 }

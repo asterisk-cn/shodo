@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 995725050}
   - component: {fileID: 995725051}
   - component: {fileID: 995725054}
-  - component: {fileID: 995725052}
+  - component: {fileID: 995725055}
   - component: {fileID: 995725053}
   m_Layer: 0
   m_Name: VirtualMouse
@@ -340,118 +340,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e8f91a7718dc475dafea81883091420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minSpeed: 500
+  _minSpeed: 200
   _maxSpeed: 800
-  _defaultSpeed: 600
---- !u!114 &995725052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 995725049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 424b6720ff5999446843ba414e58a907, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_CursorMode: 0
-  m_CursorGraphic: {fileID: 1235799972}
-  m_CursorTransform: {fileID: 1235799971}
-  m_CursorSpeed: 400
-  m_ScrollSpeed: 45
-  m_StickAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Stick
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: f51207f8-44cf-435e-8502-0ac94ddc6be2
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 
-        m_Id: 1b35260c-3946-49cf-a87a-a424d22b54d9
-        m_Path: 
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Stick
-        m_Flags: 0
-      m_Flags: 0
-    m_Reference: {fileID: -5942589230390920717, guid: 55f500c02e9a14c59828d17a078692a6, type: 3}
-  m_LeftButtonAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Left Button
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: cfd5e08c-eedf-49df-aacd-2f850e62c867
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_MiddleButtonAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Middle Button
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: a112b4df-0ec0-4efe-b763-1ed06740599d
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_RightButtonAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Right Button
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: d1c65d9b-5f78-4714-9d32-591edcbe9446
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_ForwardButtonAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Forward Button
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: e44c2ee7-13c6-46ed-a411-438092b7cbc2
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_BackButtonAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Back Button
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: c0844d53-8b73-44df-841d-674a99e9151c
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_ScrollWheelAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Scroll Wheel
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: f7eb2df8-5849-408a-a712-05e8d9cb02a4
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
+  _defaultSpeed: 400
 --- !u!114 &995725053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,6 +388,20 @@ MonoBehaviour:
   _targetImage: {fileID: 1437422969}
   _color: {r: 0, g: 0, b: 0, a: 0}
   _isWhite: 0
+--- !u!114 &995725055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995725049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2986ddc5351b4b6ebb26377720bf76cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 1235799972}
+  _cursorSpeed: 300
 --- !u!1 &1089500257
 GameObject:
   m_ObjectHideFlags: 0
